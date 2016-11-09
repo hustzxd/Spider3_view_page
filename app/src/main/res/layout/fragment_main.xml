@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hustzxd.spider3_view_page.MainActivity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/locate_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:hint="~ ~" />
+
+    <Button
+        android:id="@+id/locate_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selector" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/locate_btn"
+        android:layout_centerHorizontal="true">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:SpinKit_Color="@color/colorAccent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="%0"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Spider</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="readme">
+        1.Upload your positions \n2.
+    </string>
+    <array name="maplayer_name">
+        <item>MapLayerTest</item>
+        <item>BitmapLayerTest</item>
+        <item>LocationLayerTest</item>
+        <item>MarkLayerTest</item>
+        <item>RouteLayerTest</item>
+    </array>
+</resources>
