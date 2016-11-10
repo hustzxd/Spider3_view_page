@@ -386,14 +386,15 @@ public class MainActivity extends AppCompatActivity {
                 List<Integer> RSSIs = new ArrayList<>();
                 Map<String, Integer> map = new HashMap<>();
                 for (int i = 0; i < number; i++) {
-                    mWifiManagerUpload.startScan();
+
                     try {
                         Thread.sleep(interval);
                         publishProgress(100 / number * (i + 1));
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    List<ScanResult> scanResults = mWifiManagerUpload.getScanResults();
+                    mWifiManagerUpload.startScan();
+                    List<ScanResult> scanResults = mWifiManagerUpload.getScanResults();//error??
                     for (ScanResult scanResult : scanResults) {
                         scanResult.level += 100;
                         if (scanResult.SSID.startsWith(startWith)) {
